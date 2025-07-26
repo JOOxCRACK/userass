@@ -1,19 +1,55 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>🛠️ أداة تحويل الكومبو</title>
+  <title>Combo Converter Tool</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 500px;
+      margin: 40px auto;
+      padding: 20px;
+      background-color: #f7f7f7;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h2 {
+      text-align: center;
+    }
+    label {
+      font-weight: bold;
+    }
+    input[type="file"],
+    input[type="text"] {
+      width: 100%;
+      padding: 8px;
+      margin: 6px 0 14px;
+    }
+    button {
+      width: 100%;
+      padding: 10px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 6px;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+  </style>
 </head>
-<body style="direction: rtl; font-family: Arial; padding: 20px; max-width: 500px; margin: auto;">
-  <h2>🔄 تحويل الكومبو (Email → Username)</h2>
+<body>
+  <h2>🔄 Combo Converter (Email → Username)</h2>
   <form method="POST" enctype="multipart/form-data">
-    <label>📄 اختر ملف الكومبو:</label><br>
-    <input type="file" name="combo" required><br><br>
+    <label>📄 Upload Combo File:</label><br>
+    <input type="file" name="combo" required><br>
 
-    <label>💾 اسم ملف الإخراج (بدون .txt):</label><br>
-    <input type="text" name="output_name" placeholder="مثال: new_combo" required><br><br>
+    <label>💾 Output File Name (without .txt):</label><br>
+    <input type="text" name="output_name" placeholder="e.g. converted_combo" required><br>
 
-    <button type="submit">🚀 تحويل وتنزيل</button>
+    <button type="submit">🚀 Convert & Download</button>
   </form>
 </body>
 </html>
